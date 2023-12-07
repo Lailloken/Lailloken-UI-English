@@ -23,3 +23,4 @@
   - `important note:` don't dump every template-file into your project, only include those you actually translate/adapt (otherwise the tool will access outdated English template files)
  
 - in order to translate the tool's own UI, the `UI.txt` file has to be translated
+  - if this file is present in a secondary language folder, the settings menu will have a dropdown-list with languages to choose from
