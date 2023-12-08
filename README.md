@@ -2,7 +2,7 @@
 <br>
 
 ## Getting Started
-- download the template files and put them into a `separate` folder for easy access
+- [download](https://github.com/Lailloken/Lailloken-UI-English/archive/refs/heads/main.zip) the template files and put them into a `separate` folder for easy access
 
 - open the `data` folder within your Lailloken UI installation and create a `new folder` with the name of your target language
 - the chosen folder-name will be used/displayed in the settings menu:
