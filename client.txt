@@ -243,7 +243,7 @@
 ;## these strings are displayed in the item-text when copying advanced item descriptions into clipboard (usually ALT + CTRL + C)
 		items_ilevel			=	"Item Level:"
 
-		items_requirements		=	"Requirements:"			;## important: every string in the following block has to match the one in the "Rarity: XYZ" line in the clipboard-info
+		items_requirements		=	"Requirements:"
 		items_level			=	"Level:"
 		items_str			=	"Strength:"			;## for some reason, unidentified items show full attribute-strings, while ID'd ones show abbreviations
 		items_str			=	"Str:"
