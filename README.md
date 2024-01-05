@@ -1,6 +1,34 @@
 # Under Construction
 <br>
 
+## About
+- these are the English language-files that can be used by community members as a template to translate Lailloken UI and/or adapt it to non-English game-clients
+
+- these community translations / "language packs" will be treated as some form of extension to the main tool and will not be officially implemented
+
+  - they will be separate projects, with their own repositories
+ 
+  - it's a good idea to advertize/announce your plans of starting a project in a new thread in [this discussions section](https://github.com/Lailloken/Lailloken-UI/discussions/categories/translations-localization) in order to prevent multiple independent projects from emerging
+<br>
+
+## Publication
+- simply create a new repository to host your project
+
+  - you can name it whatever you want, but it's probably best to simply call it `Lailloken-UI-XYZ` (mirroring this repo's name)
+ 
+- the tool searches the `data` folder for folders containing language-files, e.g. `data\english`, so (depending on your preferences) you can either:
+
+  - use this repo's file/folder structure (users will have to manually create the `data\XYZ` folder and copy your files into it)
+ 
+  - use a top-level `XYZ` folder and store the files in there (so users will only have to extract that folder from the downloaded ZIP into the `data` folder)
+ 
+- to avoid confusion, please `DO NOT` create a fork of the main Lailloken-UI project
+
+  - I don't want to miss core feedback/bug-reports just because users post them on the wrong repo
+ 
+  - I don't mean to discredit the work that goes into translating, but re-working the tool to implement this translation "framework" was much more work than translating/adapting text-strings
+<br>
+
 ## Getting Started
 - [download](https://github.com/Lailloken/Lailloken-UI-English/archive/refs/heads/main.zip) the template files and put them into a `separate` folder for easy access
 
