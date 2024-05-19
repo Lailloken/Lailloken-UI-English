@@ -107,7 +107,6 @@
 		global_type			=	"type:"
 		global_add			=	"add"
 		global_calibrate		=	"cal"
-		global_calibrate		=	"calibrate"
 		global_calibrate		=	"calibration required"
 		global_import			=	"import"
 		global_test			=	"test"
