@@ -32,6 +32,12 @@
 ## Getting Started
 - [download](https://github.com/Lailloken/Lailloken-UI-English/archive/refs/heads/main.zip) the template files and extract them into a `separate` folder for easy access
 
+- generally, three use-cases are supported:
+  - only adapt the tool for non-English clients
+
+  - only translate its UI
+  - do both of those things
+
 - open the `data` folder within your Lailloken UI installation and create a `new folder` with the name of your target language
 - the chosen folder-name will be used/displayed in the settings menu:
   - in a dropdown-list used to switch between UI languages (if you choose to translate for that as well)
