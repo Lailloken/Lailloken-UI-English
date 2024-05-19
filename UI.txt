@@ -67,8 +67,10 @@
 		ms_mapping tracker		=	"mapping tracker"
 		ms_map-info			=	"map-info"
 		ms_minor qol tools		=	"minor qol tools"
+		ms_necropolis			=	"necropolis"
 		ms_screen-checks		=	"screen-checks"
 		ms_search-strings		=	"search-strings"
+		ms_stash-ninja			=	"stash-ninja"
 		ms_stream-clients		=	"stream-clients"
 		ms_tldr-tooltips		=	"tldr-tooltips"
 		ms_updater			=	"updater"
@@ -141,6 +143,15 @@
 		global_ultrawide		=	"Are there black bars on the sides of the client?"
 		global_credits			=	"credits"
 		global_none			=	"none"
+		global_necro_lantern		=	"necro: lantern"
+		global_axis			=	"x-axis"
+		global_axis			=	"y-axis"
+		global_width			=	"width"
+		global_height			=	"height"
+		global_gap			=	"gap"
+		global_pattern			=	"pattern"	;## as in color pattern
+		global_regular			=	"regular"	;## as in default
+		global_setup			=	"setup"
 
 		mechanic_bestiary		=	"bestiary"
 		mechanic_betrayal		=	"betrayal"
@@ -263,6 +274,7 @@
 		iteminfo_drop_vaal		=	"vaal"				;## exclusive to corruption
 		iteminfo_drop_retired		=	"retired"			;## item is currently not obtainable
 		iteminfo_drop_unknown		=	"unknown"			;## no database-entry for this unique (e.g. new league)
+		iteminfo_drop_global		=	"global"
 
 
 
@@ -374,7 +386,12 @@
 		ocr_nousecase			=	"use-case unclear"		;## scanned text doesn't fit any use-case
 		ocr_nocoords			=	"couldn't get coordinates"
 		ocr_erroraltar			=	"couldn't reliably read mods, retry"
-
+		ocr_vaalarea			=	"area"
+		ocr_vaalboss			=	"boss"
+		ocr_vaalmonsters		=	"monsters"
+		ocr_vaalplayer			=	"player"
+		ocr_vaalvessel			=	"vessel"
+		ocr_vaalunclear			=	"unclear"
 
 
 
@@ -397,6 +414,18 @@
 		omnikey_poedb			=	"modifiers"						;## it's the name of this section on poeDB, displayed at the top: https://poedb.tw/us/Modifiers
 
 
+
+;#####################################################
+;## screen-checks
+;#####################################################
+
+;## these strings are displayed/required when using the screen-checks feature
+		screen_snipinstructions		=	"l-click drag: normal snip"
+		screen_snipinstructions		=	"r-click drag: adjustable snip"
+		screen_snipinstructions		=	"wasd: move adj. snip"
+		screen_snipinstructions		=	"shift + wasd: resize adj. snip"
+		screen_snipinstructions		=	"space: confirm adj. snip"
+		screen_snipinstructions		=	"esc: exit"
 
 ;#####################################################
 ;## search-strings
@@ -425,6 +454,20 @@
 		seed_update			=	"update databases"
 		seed_uptodate			=	"databases are up to date"
 
+
+
+;#####################################################
+;## stash-ninja
+;#####################################################
+
+;## these strings are displayed/required when using the stash-ninja feature
+		stash_checkerror		=	"couldn't find supported;stash on screen"
+		stash_update			=	"updating prices..."
+		stash_updateerror		=	"update failed, and there is no fallback data from previous successful attempts.;this might be a connection issue that fixes itself, so try again later."
+		stash_updateerror		=	"update failed"
+		stash_value			=	"value"
+		stash_margin			=	"target margin"
+		stash_reminder			=	"reminder: switch to <note> first"
 
 
 ;#####################################################
@@ -627,9 +670,9 @@
 		m_lvltracker_skilltree		=	"skill-tree overlay settings:"
 		m_lvltracker_pob		=	"pob: middle-click opens screen-cap menu"
 		m_lvltracker_screencap		=	"screen-cap menu"
-		m_lvltracker_guide		=	"guide settings:"
-		m_lvltracker_generate		=	"generate"					;## as in generate a guide
-		m_lvltracker_reset		=	"reset progress:"
+		m_lvltracker_guide		=	"guides:"
+		m_lvltracker_generate		=	"open exile-leveling"
+		m_lvltracker_reset		=	"reset"
 		m_lvltracker_incompatible	=	"incompatible guide-data,;update required"
 
 
@@ -651,6 +694,7 @@
 		m_maptracker_dialogue		=	"–> dialogue tracking:"				;## tracking is done via in-game dialogue in the chat-box
 		m_maptracker_screen		=	"–> screen tracking:"				;## tracking is done via screen-reading
 		m_maptracker_portal		=	"reminder when using portal scrolls"		;## shows a reminder-tooltip when activating a portal scroll
+		m_maptracker_portal		=	"portal scroll hotkey:"
 
 
 
@@ -665,7 +709,19 @@
 		m_mapinfo_textcolors		=	"text-colors:"
 		m_mapinfo_header		=	"header"					;## as in line at the top of a section/paragraph
 		m_mapinfo_logbook		=	"logbook-colors:"
+		m_mapinfo_modsearch		=	"mod search:"
+		m_mapinfo_roll_highlight	=	"highlight map rolls"
 
+
+
+;#####################################################
+;## settings menu: necropolis
+;#####################################################
+
+;## these strings are displayed/required in the "necropolis" section of the settings menu
+		m_necro_enable			=	"enable lantern highlighting (experimental)"
+		m_necro_offset			=	"overlay offsets:"
+		m_necro_nowindow		=	"open the overlay;before changing settings"
 
 
 ;#####################################################
@@ -701,6 +757,29 @@
 		m_search_usecases		=	"use-cases currently set up:"
 		m_search_hideout lilly		=	"hideout lilly"					;## as in the Lilly who is in your hideout (she has a different vendor window)
 		m_search_add			=	"add use-case:"
+
+
+
+;#####################################################
+;## settings menu: stash-ninja
+;#####################################################
+
+;## these strings are displayed/required in the "stash-ninja" section of the settings menu
+		m_stash_enable			=	"enable the stash-ninja feature"
+		m_stash_breach			=	"breach"
+		m_stash_currency1		=	"currency"
+		m_stash_currency2		=	"currency ii"
+		m_stash_delve			=	"delve"
+		m_stash_fragments		=	"fragment"
+		m_stash_scarabs			=	"scarab"
+		m_stash_leagues			=	"league:"
+		m_stash_tabs			=	"stash tab configuration:"
+		m_stash_limits			=	"price-range profiles:"
+		m_stash_history			=	"show price history"
+		m_stash_exalt			=	"show exalt rates"
+		m_stash_mintrade		=	"minimum trade value (chaos):"
+		m_stash_bulk			=	"show bulk-sale suggestions"
+		m_stash_margins			=	"margins:"
 
 
 
