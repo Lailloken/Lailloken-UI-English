@@ -272,7 +272,7 @@
       "has no effect while the move key is pressed (customizable in the hotkeys section)"
     ],
     "leveltracker geartracker": [
-      "notifies you when new gear can be equipped (the guide button will turn green)",
+      "notifies you when new gear can be equipped (the guide button will show a green number)",
       "accessed by right-clicking the guide button in the toolbar",
       "while the panel is open, omni-click items to add them to the list",
       "requires specifying your character name in the <general> settings"
@@ -297,13 +297,20 @@
       "if you want to edit the images yourself, you can move them to this folder manually"
     ],
     "leveltracker generate": [
-      "opens exile-leveling to generate a guide"
+      "exile-leveling is used to generate and export the guide data"
+    ],
+    "leveltracker profile select": [
+      "click to activate this guide slot",
+      "each slot has its own data for: guide & progress, gear, skill-tree, timer"
     ],
     "leveltracker import": [
-      "imports guide data from clipboard"
+      "imports guide data from clipboard into this guide slot"
     ],
     "leveltracker reset": [
-      "hold to reset your progress and start over"
+      "hold to reset the progress in this guide slot and start over"
+    ],
+    "leveltracker profile name": [
+      "optional: type in a description/name for the guide in this slot (so guides don't get mixed up)"
     ],
     "leveltracker layouts": [
       "hold tab to activate an overlay with zone-layouts (guide overlay shows # zl)",
@@ -354,7 +361,11 @@
     ],
     "maptracker portal reminder": [
       "when using a portal scroll, a tooltip will remind you to double-check if map content has been completed",
-      "requires the <inventory> pixel-check to be set up correctly in the <screen-checks> section of the menu"
+      "requires you to specify the correct in-game hotkey below"
+    ],
+    "maptracker portal hotkey": [
+      "type in the in-game hotkey for <use portal scroll>",
+      "check the links above if it uses special keys/combinations"
     ],
     "maptracker loot-tracker": [
       "items you ctrl-click into the stash will be logged",
@@ -401,13 +412,43 @@
       "only works in hideouts and the map that was loaded into the panel"
     ],
     "mapinfo colors": [
-      "click a button to open the color-palette, right click to reset",
-      "header: color of the headers that divide the panel into sections",
-      "while hovering over mods, press 1-4 to apply a color, or space to strike out"
+      "click a button to open the color-palette, right click to reset"
     ],
     "mapinfo logbooks": [
-      "logbook mods use positive rankings, with 4 being the best value",
-      "while hovering over mods, press 1-4 to apply a color, or space to strike out"
+      "logbook mods use positive rankings, with 4 being the best value"
+    ],
+    "mapinfo modsearch": [
+      "type in map-mods (in-game wording) and press enter to list them and customize their highlighting"
+    ],
+    "mapinfo roll highlight": [
+      "map rolls (quant, rarity, etc.) will be highlighted if they meet certain requirements"
+    ],
+    "mapinfo roll colors": [
+      "this is a preview of the current highlighting settings",
+      "click the colored buttons on the right to open the palette, right-click to reset the color to default",
+      "first button: text color\nsecond button: background color"
+    ],
+    "mapinfo requirements": [
+      "specify required/desired minimum values for each roll",
+      "quantity, rarity, pack size\nmaps, scarabs, currency"
+    ],
+    "necro enable": [
+      "screen-reading feature that scans the necropolis lantern ui and enables mod highlighting"
+    ],
+    "necro compatibility": [
+      "screen-reading feature that scans the necropolis lantern ui and enables mod highlighting",
+      "a compatibility test has to be done before this feature can be enabled",
+      "open the character-stats screen, then click this checkbox to open the windows snipping tool",
+      "use it to snip 4 to 5 lines of text from the character-stats"
+    ],
+    "necro offsets": [
+      "the overlay's position aligns with the <necro: lantern> screen-check, and its size scales with the game's resolution",
+      "adjust the offsets below to fine-tune its position and size (center buttons = reset)",
+      "adjust the opacity first if you're having issues with finding the right offsets"
+    ],
+    "necro colors": [
+      "customize the colors used to highlight different mods: the text panels show the corresponding hotkey (s = space)",
+      "click the colored panels to open the palette, right-click to reset to the default color"
     ],
     "alarm enable": [
       "small timer widget with alarm and stopwatch functionality",
@@ -433,7 +474,7 @@
     ],
     "ocr enable": [
       "screen-reading feature that scans the screen and displays certain information/text in customizable & compact tooltips",
-      "currently supported: eldritch altars"
+      "currently supported: eldritch altars, vaal side areas"
     ],
     "ocr compatibility": [
       "screen-reading feature that scans the screen and displays certain information/text in customizable & compact tooltips",
@@ -532,6 +573,51 @@
     ],
     "searchstrings add": [
       "type in a name and press enter"
+    ],
+    "stash enable": [
+      "stash feature that highlights items in specific stash tabs according to rough market prices",
+	  "long-press the omni-key (default: middle mouse-button) while hovering over a scarab to activate the feature",
+	  "ui/scaling requirements:\n- there needs to be at least one tab-folder in your stash in general\n- tabs supported by this feature cannot be inside a folder"
+    ],
+    "stash calibrate": [
+      "move the settings window to the right side of the screen",
+      "open the specific stash tab in game (it CANNOT be in a tab-folder), then click this button",
+      "this calibration enables the omni-key to activate the overlay"
+    ],
+    "stash history": [
+      "shows an additional bar-chart with an item's price history for this week",
+	  "this will be shown next to conversion rates when hovering over a highlighted item-slot",
+	  "it's a timeline with bars that each represent a day and display the change in price compared to the first day"
+    ],
+    "stash exalt": [
+      "also shows exalt-equivalent prices when hovering over highlighted items or pricing items"
+    ],
+    "stash bulk": [
+      "whenever you right-click an item in the tab to price it, an additional panel with bulk-sale suggestions will be displayed",
+	  "click a preferred target margin, then click a suggestion in the table to paste the price into the game ui and confirm it"
+    ],
+    "stash mintrade": [
+      "bulk-sale suggestions under this value will not be shown (unless they are the only option: in that case, they will be highlighted red)"
+    ],
+    "stash margins": [
+      "specify your preferred target margins:\nadd as many as you want and separate them with commas, then press <enter>",
+	  "- does not support decimal values\n- red highlighting = unsaved changes"
+    ],
+    "stash gap": [
+      "refers to the horizontal gap between item boxes/slots in the stash tab",
+      "fine-tune this value to make the overlay scale correctly on your screen"
+    ],
+    "stash limits": [
+      "you can configure up to 5 price-range profiles",
+      "profile # (left), max price (top), min price (bot), measuring unit: c, e, d, % (right)",
+      "leaving min/max price blank will treat them as unlimited, leaving the measuring unit blank will disable the profile entirely",
+      "while the overlay is on screen, press number-keys 1 to 5 to switch between profiles"
+    ],
+    "stash test": [
+      "open the selected tab in game, then long-click this button to preview the overlay"
+    ],
+    "stash placeholder": [
+      "coming soon (tm)"
     ],
     "update check": [
       "checks for updates on script launch and in the background while running",
@@ -814,6 +900,15 @@
       "",
       "(/bold)(/underline)used for:",
       "-> betrayal-info overlay"
+    ],
+    "necro_lantern": [
+      "(/bold)(/underline)instructions:",
+      "-> open the lantern ui for a zone",
+      "-> click <cal> and clip the marked area (img)",
+      "-> follow the instructions in <test>",
+      "",
+      "(/bold)(/underline)used for:",
+      "-> necropolis: lantern highlighting"
     ],
     "skilltree": [
       "(/bold)(/underline)instructions:",

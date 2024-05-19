@@ -100,7 +100,7 @@ type	=	player
 text	=	no regen
 ID	=	003
 
-[cannot leech # from monsters]
+[monsters cannot be leeched from]
 type	=	player
 text	=	no leech
 ID	=	004
@@ -110,9 +110,9 @@ type	=	player
 text	=	temp chains
 ID	=	005
 
-[# maximum player resistances]
+[players have # to all maximum resistances]
 type	=	player
-text	=	max res: -%
+text	=	all max res: -%
 ID	=	006
 
 [players have # less recovery rate of life and energy shield]
@@ -147,7 +147,7 @@ ID	=	012
 
 [unique boss deals # increased damage|unique boss has # increased attack and cast speed]
 type	=	bosses
-text	=	dmg/a+c speed: +%
+text	=	dmg/speed: +%
 ID	=	013
 
 [# increased monster damage]
@@ -177,7 +177,7 @@ ID	=	018
 
 [all monster damage from hits always ignites]
 type	=	monsters
-text	=	hits ignite
+text	=	ignite conflux
 ID	=	019
 
 [monsters cannot be stunned]
@@ -187,25 +187,25 @@ ID	=	020
 
 [# increased monster movement speed|# increased monster attack speed|# increased monster cast speed]
 type	=	monsters
-text	=	m/a/c speed: +%
+text	=	speed: +%
 ID	=	021
 
 [monsters have a # chance to cause elemental ailments on hit]
 type	=	monsters
-text	=	e-ailments on hit: %
+text	=	e-ailment chance: %
 ID	=	022
 
 [monsters poison on hit]
 type	=	monsters
-text	=	poison on hit
+text	=	hits poison
 ID	=	023
 
-[monsters cannot be taunted|monsters' action speed cannot be modified to below base value]
+[monsters cannot be taunted]
 type	=	monsters
-text	=	slow/taunt immune
+text	=	taunt immune
 ID	=	024
 
-[monsters have # chance to impale with attacks]
+[monsters' attacks have # chance to impale on hit]
 type	=	monsters
 text	=	impale chance: %
 ID	=	025
@@ -247,12 +247,12 @@ ID	=	032
 
 [# monster chaos resistance|# monster elemental resistances]
 type	=	monsters
-text	=	c/e-resist: +%
+text	=	c/e resists: +%
 ID	=	033
 
 [# less effect of curses on monsters]
 type	=	monsters
-text	=	curse resist: %
+text	=	less curse eff: %
 ID	=	034
 
 [monsters have # chance to suppress spell damage]
@@ -350,6 +350,11 @@ type	=	monsters
 text	=	e-charge on hit
 ID	=	053
 
+[monsters gain an endurance charge when hit]
+type	=	monsters
+text	=	e-charge on hit
+ID	=	053
+
 [monsters gain a frenzy charge on hit]
 type	=	monsters
 text	=	f-charge on hit
@@ -362,7 +367,7 @@ ID	=	055
 
 [monsters blind on hit]
 type	=	monsters
-text	=	blind on hit
+text	=	hits blind
 ID	=	056
 
 [monsters maim on hit with attacks]
@@ -477,7 +482,7 @@ ID	=	078
 
 [# more magic monsters]
 type	=	monsters
-text	=	more magic mobs: %
+text	=	more magic: %
 ID	=	079
 
 [area contains two unique bosses]
@@ -487,28 +492,273 @@ ID	=	080
 
 [# increased number of rare monsters]
 type	=	monsters
-text	=	rare mobs: +%
+text	=	inc rares: +%
 ID	=	081
 
-[monsters deal # extra physical damage as chaos]
+[monsters gain # of their physical damage as extra chaos damage]
 type	=	monsters
 text	=	phys as chaos: %
 ID	=	082
 
-[monsters inflict withered for # seconds on hit]
+[monsters gain # of their physical damage as extra chaos damage|monsters inflict withered for # seconds on hit]
 type	=	monsters
-text	=	wither on hit
-ID	=	083
+text	=	phys as chaos | wither: %
+ID	=	082
 
-[Players in Area are Delirious]
+[players in area are delirious]
 type	=	player
 text	=	delirious: %
 ID	=	084
 
-[Maven releases all Bosses at once]
+[maven releases all bosses at once]
 type	=	bosses
 text	=	all at once
 ID	=	085
+
+[monsters have a # chance ignite, freeze and shock on hit]
+type	=	monsters
+text	=	triple conflux: %
+ID	=	086
+
+[monsters have a # chance to ignite, freeze and shock on hit]
+type	=	monsters
+text	=	triple conflux: %
+ID	=	086
+
+[monsters' action speed cannot be modified to below base value|monsters' movement speed cannot be modified to below base value]
+type	=	monsters
+text	=	slow immune
+ID	=	087
+
+[area is inhabited by the vaal|found items have # chance to drop corrupted in area]
+type	=	area
+text	=	corr. drops: %
+ID	=	088
+
+[players are cursed with vulnerability|players are cursed with temporal chains|players are cursed with elemental weakness]
+type	=	player
+text	=	vuln | chains | ele weak
+ID	=	158
+
+[increased number of rare monsters|rare monsters each have # additional modifiers]
+type	=	monsters
+text	=	inc rares | extra mods
+ID	=	159
+
+[area contains drowning orbs]
+type	=	area
+text	=	drowning orbs
+ID	=	160
+
+[the maven interferes with players]
+type	=	player
+text	=	maven interferes
+ID	=	161
+
+[area contains runes of the searing exarch]
+type	=	area
+text	=	exarch runes
+ID	=	162
+
+[debuffs on monsters expire # faster]
+type	=	monsters
+text	=	debuff expiration: +%
+ID	=	163
+
+[map boss is accompanied by a synthesis boss]
+type	=	bosses
+text	=	added synth. boss
+ID	=	164
+
+[players' minions have # less attack speed|players' minions have # less cast speed|players' minions have # less movement speed]
+type	=	player
+text	=	less minion spd: %
+ID	=	165
+
+[players in area take # increased damage per nearby ally]
+type	=	player
+text	=	dmg taken per ally: +%
+ID	=	166
+
+[rare and unique monsters spawn a tormented spirit on reaching low life]
+type	=	monsters
+text	=	ll rare+ spawn spirits
+ID	=	167
+
+[# of damage players' totems take from hits is taken from their summoner's life instead]
+type	=	player
+text	=	tank totem dmg: %
+ID	=	168
+
+[area has patches of awakeners' desolation]
+type	=	area
+text	=	sirus puddles
+ID	=	169
+
+[player skills which throw mines throw # fewer mine|player skills which throw traps throw # fewer trap]
+type	=	player
+text	=	mines/traps: -
+ID	=	170
+
+[area contains unstable tentacle fiends]
+type	=	area
+text	=	tentacle fiends
+ID	=	171
+
+[players have # to maximum number of summoned totems]
+type	=	player
+text	=	max totems: -
+ID	=	172
+
+[players have # reduced action speed for each time they've used a skill recently]
+type	=	player
+text	=	speed per skill: -%
+ID	=	173
+
+[rare monsters in area are shaper-touched]
+type	=	monsters
+text	=	rares are shapered
+ID	=	174
+
+[monster damage penetrates # elemental resistances]
+type	=	monsters
+text	=	ele pen: %
+ID	=	175
+
+[monsters' attacks impale on hit|when a fifth impale is inflicted on a player, impales are removed to reflect thier physical damage multiplied by their remaining hits to that player and their allies within # metres]
+type	=	monsters
+text	=	impale | 5 stacks pop
+ID	=	176
+
+[monsters' attacks impale on hit|when a fifth impale is inflicted on a player, impales are removed to reflect their physical damage multiplied by their remaining hits to that player and their allies within # metres]
+type	=	monsters
+text	=	impale | 5 stacks pop
+ID	=	176
+
+[rare and unique monsters remove # of life, mana and energy shield from players or their minions on hit]
+type	=	monsters
+text	=	rare+ remove l/m/es: %
+ID	=	177
+
+[players are marked for death for # seconds|after killing a rare or unique monster]
+type	=	player
+text	=	marked for death
+ID	=	178
+
+[all monster damage can ignite, freeze and shock|monsters ignite, freeze and shock on hit]
+type	=	monsters
+text	=	triple conflux
+ID	=	179
+
+[players cannot block|players cannot suppress spell damage]
+type	=	player
+text	=	can't block/suppress
+ID	=	180
+
+[players cannot recharge energy shield|players cannot regenerate life, mana or energy shield]
+type	=	player
+text	=	no regen/recharge
+ID	=	181
+
+[players have # less defences]
+type	=	player
+text	=	less defences: %
+ID	=	182
+
+[# reduced effect of curses on monsters]
+type	=	monsters
+text	=	red. curse eff: %
+ID	=	183
+
+[players are targeted by a meteor when they use a flask]
+type	=	player
+text	=	meteor on flask
+ID	=	184
+
+[players are assaulted by bloodstained sawblades]
+type	=	player
+text	=	sawblade assault
+ID	=	185
+
+[players cannot gain endurance charges|players cannot gain frenzy charges|players cannot gain power charges]
+type	=	player
+text	=	can't gain charges
+ID	=	186
+
+[area contains # additional clusters of highly volatile barrels]
+type	=	area
+text	=	volatile barrels: +
+ID	=	187
+
+[monsters gain # of their physical damage as extra damage of a random element]
+type	=	monsters
+text	=	phys as ele: %
+ID	=	188
+
+[area contains petrification statues]
+type	=	area
+text	=	petrify statues
+ID	=	189
+
+[rare monsters have volatile cores]
+type	=	monsters
+text	=	rares are volatile
+ID	=	190
+
+[unique monsters have a random shrine buff]
+type	=	monsters
+text	=	uniques are shrined
+ID	=	191
+
+[monsters inflict # grasping vines on hit]
+type	=	monsters
+text	=	grasping vines
+ID	=	192
+
+[monsters have # chance to block attack damage]
+type	=	monsters
+text	=	attack-block: +%
+ID	=	193
+
+[monsters poison on hit|all damage from monsters' hits can poison|monsters have # increased poison duration]
+type	=	monsters
+text	=	psn conflux/duration
+ID	=	194
+
+[monsters have # to maximum endurance charges|monsters gain an endurance charge when hit]
+type	=	monsters
+text	=	e-charge on hit | +max
+ID	=	195
+
+[monsters have # to maximum endurance charges|monsters gain an endurance charge on hit]
+type	=	monsters
+text	=	e-charge on hit | +max
+ID	=	195
+
+[monsters have # to maximum frenzy charges|monsters gain a frenzy charge on hit]
+type	=	monsters
+text	=	f-charge on hit | +max
+ID	=	196
+
+[monsters have # to maximum power charges|monsters gain a power charge on hit]
+type	=	monsters
+text	=	p-charge on hit | +max
+ID	=	197
+
+[players and their minions deal no damage for # out of every # seconds]
+type	=	player
+text	=	zdps intervals
+ID	=	198
+
+[all magic and normal monsters in area are in a union of souls]
+type	=	monsters
+text	=	union of souls
+ID	=	199
+
+[monsters' skills chain # additional times|monsters' projectiles can chain when colliding with terrain]
+type	=	monsters
+text	=	(terrain) chains: +
+ID	=	200
 
 [monsters have # chance to gain a frenzy charge on hit]
 type	=	monsters
@@ -597,7 +847,7 @@ ID	=	217
 
 [reinforcements have # increased attack speed|reinforcements have # increased cast speed|reinforcements have # increased movement speed]
 type	=	monsters
-text	=	reinforce m/a/c speed: +%
+text	=	r-force speed: +%
 ID	=	218
 
 [lockdown occurs immediately when alert level is full]
