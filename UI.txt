@@ -91,6 +91,7 @@
 		global_delete			=	"del"
 		global_scan			=	"scanning..."
 		global_match			=	"no match"
+		global_match			=	"not specific enough"
 		global_window			=	"settings menu"
 		global_general			=	"general settings:"
 		global_ui			=	"ui settings:"
@@ -466,7 +467,7 @@
 		stash_updateerror		=	"update failed, and there is no fallback data from previous successful attempts.;this might be a connection issue that fixes itself, so try again later."
 		stash_updateerror		=	"update failed"
 		stash_value			=	"value"
-		stash_margin			=	"target margin"
+		stash_margin			=	"target margin (%)"
 		stash_reminder			=	"reminder: switch to <note> first"
 
 
@@ -709,6 +710,8 @@
 		m_mapinfo_textcolors		=	"text-colors:"
 		m_mapinfo_header		=	"header"					;## as in line at the top of a section/paragraph
 		m_mapinfo_logbook		=	"logbook-colors:"
+		m_mapinfo_modsettings		=	"map-mod settings:"
+		m_mapinfo_pinned		=	"pinned mods:"
 		m_mapinfo_modsearch		=	"mod search:"
 		m_mapinfo_roll_highlight	=	"highlight map rolls"
 
@@ -766,20 +769,27 @@
 
 ;## these strings are displayed/required in the "stash-ninja" section of the settings menu
 		m_stash_enable			=	"enable the stash-ninja feature"
+		m_stash_blight			=	"blight"
 		m_stash_breach			=	"breach"
 		m_stash_currency1		=	"currency"
 		m_stash_currency2		=	"currency ii"
+		m_stash_delirium		=	"delirium"
 		m_stash_delve			=	"delve"
+		m_stash_essences		=	"essence"
 		m_stash_fragments		=	"fragment"
 		m_stash_scarabs			=	"scarab"
+		m_stash_ultimatum		=	"ultimatum"
 		m_stash_leagues			=	"league:"
 		m_stash_tabs			=	"stash tab configuration:"
 		m_stash_limits			=	"price-range profiles:"
+		m_stash_profiles		=	"apply trade value to profiles 1-4"
 		m_stash_history			=	"show price history"
 		m_stash_exalt			=	"show exalt rates"
 		m_stash_mintrade		=	"minimum trade value (chaos):"
+		m_stash_folder			=	"this tab is in a stash folder"
 		m_stash_bulk			=	"show bulk-sale suggestions"
-		m_stash_margins			=	"margins:"
+		m_stash_margins			=	"margins (%):"
+		m_stash_active			=	"active tab:"
 
 
 
