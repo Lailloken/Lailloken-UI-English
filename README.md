@@ -1,4 +1,9 @@
-# Under Construction
+# UPDATE (Dec 19, 2024): Translation/Localization Support to be discontinued in the near future if interest remains low
+
+Maintaining support for optional translations/localizations has become a bit annoying, especially since I also want to support PoE 2. I implemented this due to requests here and there, even though I knew it was never going to gain much traction.
+
+***
+
 <br>
 
 ## About
