@@ -20,11 +20,8 @@
 
 
 ;## some notation remarks
-	;## AutoHotkey-specific:
-		;## in order to add ampersands (&) to a string, include double ampersands in the value, e.g. key = "this && that"
-	;## custom notations:
-		;## in order to add line-breaks to a string, include ";" in the value, e.g. "line 1;line2"
-		;## I use <> as a replacement for quotation marks because they look better when using Fontin Smallcaps
+	;## in order to add line-breaks to a string, include ";" in the value, e.g. "line 1;line2"
+	;## I often use <> as a replacement for quotation marks because they look better when using Fontin Smallcaps
 
 
 ;## case-sensitivity
@@ -61,13 +58,15 @@
 		ms_betrayal-info		=	"betrayal-info"
 		ms_cheat-sheets			=	"cheat-sheets"
 		ms_clone-frames			=	"clone-frames"
+		ms_donations			=	"donations"
+		ms_filterspoon			=	"filterspoon"
 		ms_hotkeys			=	"hotkeys"
 		ms_item-info			=	"item-info"
-		ms_leveling tracker		=	"leveling tracker"
-		ms_mapping tracker		=	"mapping tracker"
+		ms_leveling tracker		=	"act-tracker"
+		ms_mapping tracker		=	"map-tracker"
 		ms_map-info			=	"map-info"
 		ms_minor qol tools		=	"minor qol tools"
-		ms_necropolis			=	"necropolis"
+		ms_sanctum			=	"sanctum planner"
 		ms_screen-checks		=	"screen-checks"
 		ms_search-strings		=	"search-strings"
 		ms_stash-ninja			=	"stash-ninja"
@@ -90,6 +89,7 @@
 		global_delete			=	"delete"
 		global_delete			=	"del"
 		global_scan			=	"scanning..."
+		global_scan			=	"scan"
 		global_match			=	"no match"
 		global_match			=	"not specific enough"
 		global_window			=	"settings menu"
@@ -100,7 +100,7 @@
 		global_enable			=	"enable"
 		global_reset			=	"reset"
 		global_color			=	"color"
-		global_color			=	"colors"
+		global_color			=	"colors:"
 		global_opacity			=	"opacity:"
 		global_tier			=	"tier"
 		global_ilvl			=	"ilvl"
@@ -122,7 +122,7 @@
 		global_image			=	"img"
 		global_save			=	"save"
 		global_discard			=	"discard"
-		global_restart			=	"apply && restart"
+		global_restart			=	"apply & restart"
 		global_imgfolder		=	"open img folder"
 		global_newentry			=	"add entry:"
 		global_savedentry		=	"saved entries:"
@@ -144,7 +144,6 @@
 		global_ultrawide		=	"Are there black bars on the sides of the client?"
 		global_credits			=	"credits"
 		global_none			=	"none"
-		global_necro_lantern		=	"necro: lantern"
 		global_axis			=	"x-axis"
 		global_axis			=	"y-axis"
 		global_width			=	"width"
@@ -155,6 +154,28 @@
 		global_setup			=	"setup"
 		global_variance			=	"variance (0-255)"
 		global_hotkey			=	"hotkey:"
+		global_panelsize		=	"panel-size:"
+		global_uisize			=	"ui size:"
+		global_auto			=	"auto"
+		global_price			=	"price"
+		global_all			=	"all"
+		global_confirm			=	"confirm"
+		global_mouse			=	"l#m#r"		;## left, middle, right mouse-button
+		global_coordinates		=	"coordinates"
+		global_time			=	"time:"
+		global_refresh			=	"refresh"
+		global_settings			=	"settings"
+		global_regex			=	"copy regex"
+		global_clipboard		=	"copied to clipboard"
+		global_start			=	"start"
+		global_cancel			=	"cancel"
+		global_downloading		=	"downloading..."
+		global_search			=	"search:"
+		global_toggle			=	"toggle"
+		global_hide			=	"hide"
+		global_revert			=	"revert"
+		global_apply			=	"apply"
+		global_apply			=	"apply changes"
 
 		mechanic_bestiary		=	"bestiary"
 		mechanic_betrayal		=	"betrayal"
@@ -171,6 +192,14 @@
 		mechanic_lab trial		=	"lab trial"
 		mechanic_ultimatum		=	"ultimatum"
 		mechanic_maven			=	"maven"
+		mechanic_baran			=	"baran"
+		mechanic_drox			=	"drox"
+		mechanic_al-hezmin		=	"al-hezmin"
+		mechanic_veritania		=	"veritania"
+		mechanic_constrictor		=	"constrictor"
+		mechanic_enslaver		=	"enslaver"
+		mechanic_eradicator		=	"eradicator"
+		mechanic_purifier		=	"purifier"
 
 
 ;#####################################################
@@ -222,7 +251,7 @@
 		betrayal_fortification		=	"fortification"
 		betrayal_research		=	"research"
 		betrayal_intervention		=	"intervention"
-		betrayal_abort			=	"press esc, or go back to the game to abort"
+		betrayal_abort			=	"go back to the game to abort"
 
 
 
@@ -237,7 +266,6 @@
 		cheat_dynamic			=	"dynamic"
 		cheat_activation		=	"activation:"
 		cheat_hold			=	"hold"
-		cheat_toggle			=	"toggle"
 		cheat_manage			=	"manage image-files:"
 		cheat_title			=	"window title:"
 		cheat_launch			=	"if the window is not found,;launch this app instead:"
@@ -282,13 +310,13 @@
 
 
 ;#####################################################
-;## leveling tracker
+;## leveling tracker / act-tracker
 ;#####################################################
 
-;## these strings are displayed/required when using the leveling tracker
+;## these strings are displayed/required when using the leveling tracker / act-tracker
 		lvltracker_header		=	"skilltree configuration"
 		lvltracker_deleteall		=	"del all"
-		lvltracker_gemnotes		=	"no notes;for this gem"
+		lvltracker_gemnotes		=	"not included in pob"
 		lvltracker_gearlist		=	"char (lvl):"					;## displayed at the top of the geartracker: "char (lvl): Lailloken (69)"
 		lvltracker_gearadd		=	"item added"
 		lvltracker_gearadd		=	"item already added"
@@ -314,6 +342,23 @@
 		lvltracker_timermessage		=	"run started"
 		lvltracker_timermessage		=	"timer resumed"
 		lvltracker_timermessage		=	"timer paused"
+		lvltracker_treeerror		=	"skill-tree version;is incompatible"
+		lvltracker_treenone		=	"imported pob doesn't;have usable trees"
+		lvltracker_treeascendancy	=	"slot empty"
+
+
+;#####################################################
+;## lootfilter / filterspoon
+;#####################################################
+
+;## these strings are displayed/required when using the lootfilter / filterspoon feature
+		lootfilter_basefilter		=	"filter:"
+		lootfilter_modifications	=	"current modifications:"
+		lootfilter_unsaved		=	"long-press to discard"
+		lootfilter_update		=	"apply base filter updates"
+		lootfilter_addstack		=	"add stack:"
+		lootfilter_selection		=	"current selection:"
+
 
 
 ;#####################################################
@@ -333,6 +378,7 @@
 		maptracker_logs			=	"logs:"
 		maptracker_logs			=	"couldn't find any map-logs"
 		maptracker_page			=	"page:"
+		maptracker_page			=	"page-entries:"		;## i.e. how many entries to show on each page
 		maptracker_header		=	"map-log viewer"
 		maptracker_dialogue		=	"<output dialogue to chat> has to;be enabled in the game's <ui> settings"
 
@@ -348,8 +394,10 @@
 		maptracker_portals		=	"portals"
 		maptracker_kills1		=	"kills"
 		maptracker_loot1		=	"loot"
+		maptracker_mapinfo		=	"mods"			;## as in map mods
+		maptracker_notes		=	"notes"
+		maptracker_character		=	"character"
 		maptracker_content		=	"content"		;## refers to map-content (league-mechanics, side-areas, etc.)
-		maptracker_search		=	"search:"
 
 ;## these strings are displayed in the sum/average tooltips (while long-clicking colored cells in the Σ row)
 		maptracker_sum			=	"sum"
@@ -419,6 +467,70 @@
 
 
 ;#####################################################
+;## recombination
+;#####################################################
+
+;## these strings are displayed/required when using the recombination feature
+		recomb_prefixes			=	"desired prefixes:"
+		recomb_suffixes			=	"desired suffixes:"
+		recomb_simulation		=	"simulation:"
+		recomb_desired			=	"too many desired affixes"
+		recomb_rerun			=	"re-run"
+		recomb_refresh			=	"click to refresh"
+
+
+
+;#####################################################
+;## sanctum planner
+;#####################################################
+
+;## these strings are displayed/required when using the sanctum planner
+		sanctum_calibrate		=	"calibrate;paths"
+		sanctum_calibrate		=	"calibrate;rooms"
+
+		sanctum_floors			=	"sanctum archives"
+		sanctum_floors			=	"sanctum vaults"
+		sanctum_floors			=	"sanctum cathedral"
+		sanctum_floors			=	"sanctum necropolis"
+
+		sanctum_rooms_1			=	"mini-boss"
+		sanctum_rooms_2			=	"find exit"
+		sanctum_rooms_3			=	"clear room"
+		sanctum_rooms_4			=	"exit traps"
+		sanctum_rooms_5			=	"battle arena"
+
+		sanctum_rooms_1_1		=	"scriptorium"
+		sanctum_rooms_1_2		=	"reliquary"
+		sanctum_rooms_1_3		=	"sanctum bellum"
+		sanctum_rooms_1_4		=	"mausoleum"
+
+		sanctum_rooms_2_1		=	"abandoned library"
+		sanctum_rooms_2_2		=	"decrepit cellar"
+		sanctum_rooms_2_3		=	"halls of worship"
+		sanctum_rooms_2_4		=	"undercroft"
+
+		sanctum_rooms_3_1		=	"chambers of inscription"
+		sanctum_rooms_3_2		=	"derelict caverns"
+		sanctum_rooms_3_3		=	"unholy lair"
+		sanctum_rooms_3_4		=	"lost catacombs"
+
+		sanctum_rooms_4_1		=	"holy trials"
+		sanctum_rooms_4_2		=	"gauntlet"
+		sanctum_rooms_4_3		=	"crucible"
+		sanctum_rooms_4_4		=	"entombment"
+
+		sanctum_rooms_5_1		=	"templar annals"
+		sanctum_rooms_5_2		=	"battlegrounds"
+		sanctum_rooms_5_3		=	"infernum"
+		sanctum_rooms_5_4		=	"desecrated crypt"
+
+		sanctum_info			=	"ben. fountain (150c):;+1 boon;"	;## semicolon at the end to make it three lines
+		sanctum_info			=	"rad. fountain (5c):;+1 boon, -1 affl, +200 insp;rerolls afflicted rooms"
+
+
+
+
+;#####################################################
 ;## screen-checks
 ;#####################################################
 
@@ -464,13 +576,21 @@
 ;#####################################################
 
 ;## these strings are displayed/required when using the stash-ninja feature
-		stash_checkerror		=	"couldn't find supported;stash on screen"
-		stash_update			=	"updating prices..."
+		stash_update			=	"updating poe.ninja;prices..."
 		stash_updateerror		=	"update failed, and there is no fallback data from previous successful attempts.;this might be a connection issue that fixes itself, so try again later."
 		stash_updateerror		=	"update failed"
-		stash_value			=	"value"
-		stash_margin			=	"target margin (%)"
-		stash_reminder			=	"reminder: switch to <note> first"
+		stash_value			=	"market value"
+		stash_reminder			=	"switch to <note> first"
+		stash_limits			=	"rate limits:"			;## GGG's APIs have tiered rate limits that control how often you can access them
+		stash_open			=	"open"				;## in the context of "X open trade listings"
+		stash_nolistings		=	"no listings;online"		;## i.e. no-one is selling that item right now
+		stash_bulk			=	"bulk:"
+		stash_stock			=	"stock"				;## as in available stock
+		stash_pricetags			=	"price tags:"
+		stash_solo			=	"solo"				;## as in a single person/thing/reason
+		stash_sell			=	"sell"
+		stash_sell			=	"for"				;## these two belong together, i.e. "sell X for Y"
+		stash_bookmark			=	"bookmark-profile"
 
 
 ;#####################################################
@@ -491,11 +611,14 @@
 ;## these strings are displayed/required in the "general" section of the settings menu
 		m_general_settings		=	"script settings:"
 		m_general_kill			=	"exit x minutes after closing the game:"
-		m_general_browser		=	"enable browser features"
-		m_general_capslock		=	"enable capslock-toggling"			;## by default, AHK will toggle capslock to off whenever it sends key-strokes
-		m_general_character		=	"active character:"
+		m_general_browser		=	"browser features"
+		m_general_capslock		=	"capslock-toggling"		;## by default, AHK will toggle capslock back and forth whenever it sends key-strokes
+		m_general_character		=	"current char:"
+		m_general_build			=	"current build:"
 		m_general_level			=	"lvl"
 		m_general_client		=	"game-client settings:"
+		m_general_client		=	"game-client info:"
+		m_general_logfile		=	"log-file health:"
 		m_general_language		=	"language:"
 		m_general_language		=	"detected language:"
 		m_general_language		=	"not supported"
@@ -518,7 +641,7 @@
 		m_general_start			=	"start test"
 		m_general_admin			=	"restart script as admin"
 		m_general_toolbar		=	"toolbar-size:"
-		m_general_hidetoolbar		=	"permanently hide the toolbar"
+		m_general_hidetoolbar		=	"hide the toolbar when not in use"
 
 
 
@@ -558,7 +681,7 @@
 
 ;## these strings are displayed/required in the "betrayal-info" section of the settings menu
 		m_betrayal_enable		=	"enable the betrayal-info overlay"
-		m_betrayal_ruthless		=	"ruthless rewards && highlighting"	;## it's a toggle to switch between regular and ruthless rewards
+		m_betrayal_ruthless		=	"ruthless rewards & highlighting"	;## it's a toggle to switch between regular and ruthless rewards
 		m_betrayal_recognition		=	"image-recognition:"
 		m_betrayal_colors		=	"reward-colors:"
 		m_betrayal_rewards		=	"reward customization:"
@@ -642,7 +765,7 @@
 		m_iteminfo_modrolls		=	"hide roll-ranges on explicit mods"
 		m_iteminfo_shift		=	"shift-clicking activates item-info"
 		m_iteminfo_league		=	"enable league-start mode"
-		m_iteminfo_base			=	"show && compare item's base-stats"		;## base-stats as in armor, evasion, ES, attack-speed, phys/ele dmg
+		m_iteminfo_base			=	"show & compare item's base-stats"		;## base-stats as in armor, evasion, ES, attack-speed, phys/ele dmg
 		m_iteminfo_ilvl			=	"display item-lvl requirements"
 		m_iteminfo_highlight		=	"highlight customization:"
 		m_iteminfo_fractured		=	"fr"						;## this abbreviation for "fractured" should always have a length of 2 (max 3 if really necessary)
@@ -658,11 +781,20 @@
 
 
 ;#####################################################
-;## settings menu: leveling tracker
+;## settings menu: filterspoon
 ;#####################################################
 
-;## these strings are displayed/required in the "leveling tracker" section of the settings menu
-		m_lvltracker_enable		=	"enable the leveling tracker"
+;## these strings are displayed/required in the "filterspoon" section of the settings menu
+		m_lootfilter_enable		=	"enable the filterspoon feature (experimental)"
+
+
+
+;#####################################################
+;## settings menu: leveling tracker / act-tracker
+;#####################################################
+
+;## these strings are displayed/required in the "act-tracker" section of the settings menu
+		m_lvltracker_enable		=	"enable the act-tracker feature"
 		m_lvltracker_timer		=	"enable timer"
 		m_lvltracker_pause		=	"pause timer in hideouts"
 		m_lvltracker_fade		=	"fade out after x seconds:"
@@ -672,28 +804,31 @@
 		m_lvltracker_hints		=	"hints"
 		m_lvltracker_hotkeys		=	"enable page-switching via hotkeys"
 		m_lvltracker_skilltree		=	"skill-tree overlay settings:"
+		m_lvltracker_pobmanual	=	"use screen-caps instead of schematics"
 		m_lvltracker_pob		=	"pob: middle-click opens screen-cap menu"
 		m_lvltracker_screencap		=	"screen-cap menu"
 		m_lvltracker_guide		=	"guides:"
 		m_lvltracker_generate		=	"open exile-leveling"
 		m_lvltracker_reset		=	"reset"
 		m_lvltracker_incompatible	=	"incompatible guide-data,;update required"
+		m_lvltracker_treeclear		=	"delete data"
 
 
 
 ;#####################################################
-;## settings menu: mapping tracker
+;## settings menu: map-tracker
 ;#####################################################
 
-;## these strings are displayed/required in the "mapping tracker" section of the settings menu
-		m_maptracker_enable		=	"enable the mapping tracker"
+;## these strings are displayed/required in the "map-tracker" section of the settings menu
+		m_maptracker_enable		=	"enable the map-tracker feature"
 		m_maptracker_hide		=	"hide the panel when the tracker is paused"
 		m_maptracker_loot		=	"loot"
 		m_maptracker_kills		=	"kills"
 		m_maptracker_mapinfo		=	"map-info data"					;## option to include data from the map-info feature
 		m_maptracker_notes		=	"notes"						;## option to add notes to map runs
 		m_maptracker_sidearea		=	"side-areas"
-		m_maptracker_rename		=	"tag && rename boss maps"			;## adds a "boss:"-tag to logged map-runs
+		m_maptracker_rename		=	"tag & rename boss maps"			;## adds a "boss:"-tag to logged map-runs
+		m_maptracker_character		=	"character/build info"
 		m_maptracker_content		=	"track atlas mechanics"
 		m_maptracker_dialogue		=	"–> dialogue tracking:"				;## tracking is done via in-game dialogue in the chat-box
 		m_maptracker_screen		=	"–> screen tracking:"				;## tracking is done via screen-reading
@@ -717,17 +852,8 @@
 		m_mapinfo_pinned		=	"pinned mods:"
 		m_mapinfo_modsearch		=	"mod search:"
 		m_mapinfo_roll_highlight	=	"highlight map rolls"
+		m_mapinfo_reset			=	"reset tiers"
 
-
-
-;#####################################################
-;## settings menu: necropolis
-;#####################################################
-
-;## these strings are displayed/required in the "necropolis" section of the settings menu
-		m_necro_enable			=	"enable lantern highlighting (experimental)"
-		m_necro_offset			=	"overlay offsets:"
-		m_necro_nowindow		=	"open the overlay;before changing settings"
 
 
 ;#####################################################
@@ -740,6 +866,16 @@
 		m_qol_widget			=	"widget opacity:"
 		m_qol_widgetcolor		=	"default widget colors:"
 		m_qol_lab			=	"lab overlay:"
+
+
+
+;#####################################################
+;## settings menu: sanctum planner
+;#####################################################
+
+;## these strings are displayed/required in the "sanctum planner" section of the settings menu
+		m_sanctum_enable		=	"enable the sanctum planner overlay (beta)"
+		m_sanctum_cheatsheets		=	"show cheat-sheet"
 
 
 
@@ -790,9 +926,10 @@
 		m_stash_exalt			=	"show exalt rates"
 		m_stash_mintrade		=	"minimum trade value (chaos):"
 		m_stash_folder			=	"this tab is in a stash folder"
-		m_stash_bulk			=	"show bulk-sale suggestions"
+		m_stash_bulk			=	"enable bulk-sale management"
 		m_stash_margins			=	"margins (%):"
 		m_stash_active			=	"active tab:"
+		m_stash_bookmarking		=	"enable bookmarking"
 
 
 
@@ -826,7 +963,6 @@
 		m_updater_github		=	"github links:"
 		m_updater_github		=	"main page"
 		m_updater_github		=	"releases"
-		m_updater_refresh		=	"refresh"
 		m_updater_changelog		=	"full changelog"
 		m_updater_skip			=	"skip"
 		m_updater_failed		=	"update failed:"
